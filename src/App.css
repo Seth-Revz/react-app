@@ -1,12 +1,41 @@
 .App {
   text-align: center;
+  font-family: 'Racing Sans One', cursive;
 }
 
 .App-logo {
   height: 40vmin;
 }
 
+.rectangle {
+  height: auto;
+  min-height: 50%;
+  width: 23%;
+  min-width: 200px;
+  margin-left: -40%;
+  background-color: #555;
+  border-radius: 50px;
+  opacity: .85;
+}
+
+.rectangle h3 {
+  font-size: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.rectangle p {
+  font-size: 35px;
+  margin: 10px;
+  padding-left: 10%;
+  text-align: left;
+}
+
 .App-header {
+  background-image: url("anime.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -17,6 +46,33 @@
   color: white;
 }
 
+.overlay {
+  height: 0px;
+  overflow: visible;
+  pointer-events: none;
+  background: none !important;
+}
+
 .App-link {
   color: #09d3ac;
+}
+
+a:link {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+a:active {
+  color: #ffa500;
+  text-decoration: none;
 }
