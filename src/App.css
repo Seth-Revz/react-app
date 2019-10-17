@@ -7,36 +7,10 @@
   height: 40vmin;
 }
 
-.rectangle {
-  height: auto;
-  min-height: 50%;
-  width: 23%;
-  min-width: 200px;
-  margin-left: -40%;
-  background-color: #555;
-  border-radius: 50px;
-  opacity: .85;
-}
-
-.rectangle h3 {
-  font-size: 80px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: normal;
-}
-
-.rectangle p {
-  font-size: 35px;
-  margin: 10px;
-  padding-left: 10%;
-  text-align: left;
-}
-
 .App-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('anime.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('./assets/anime.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -44,6 +18,62 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.info {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  width: 32%;
+  height: 40%;
+  top: 4%;
+  left: 7%;
+}
+
+.shuriken {
+  width: 400px;
+  height: 400px;
+  opacity: .75;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url('./assets/shuriken.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+.text {
+  position: absolute;
+  top: 60px;
+  left: 125px;
+}
+
+.info h3 {
+  font-size: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.info p {
+  font-size: 35px;
+  margin: 10px;
 }
 
 .overlay {
